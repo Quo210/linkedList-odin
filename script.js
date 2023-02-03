@@ -3,8 +3,7 @@ class LinkedList {
         this.name = 'Linked List';
         this.size = 0;
         this.headNode = null;
-    }
-
+    };
     append(node){
         let selector;
         let myNode = node;
@@ -22,10 +21,8 @@ class LinkedList {
             console.log('Last node fonund was',selector)
             selector.nextNode = myNode
             this.size++
-        }
-        
-    }
-
+        }  
+    };
     preprend(val){
         let oldHead = this.headNode;
         let newNode = new Node(val);
@@ -118,10 +115,7 @@ class LinkedList {
             init = init.nextNode;
         }
         return storeString += 'null'
-    }
-
-
-
+    };
     #findLast(node){
         console.log('#findLast execution on',node)
         let lastNode;
