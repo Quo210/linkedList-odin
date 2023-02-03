@@ -36,36 +36,28 @@ class LinkedList {
             this.size++
         }
         return this
-    }
-
+    };
     /* ------------------------ */
-
     get listSize(){
         return 'This list has a size of ' + this.size;
-    }
-
+    };
     get head(){
         return this.headNode
-    }
-
+    };
     set head(val){
         this.headNode = val;
-    }
-
+    };
     get tail(){
         if(this.headNode == null){
             return null
         }
         const lastNode = this.#findLast(this.headNode);
         return lastNode
-    }
-
+    };
     /* ------------------------ */
-
     at(index){
         const store = this.#mkNodeArray();
         return (store[index])? store[index] : 'Not found'; 
-
     };
     pop(){//Using Arrays
         const list = this.#mkNodeArray();
@@ -144,10 +136,9 @@ class LinkedList {
         }
         return store;
     };
-}
+};
 
 class Node {
-
     constructor(data, nextOne = null){
         this.data = data; 
         this.nextNode = nextOne;
@@ -155,12 +146,10 @@ class Node {
     set next(val){
         this.nextNode = val
     }
+};
 
-}
-
-const a = new LinkedList();
-a.append(2)
-a.preprend(1)
-a.append(3)
-
-console.log(a)
+const myList = new LinkedList();
+myList.append(2);
+myList.preprend(1);
+myList.append(3);
+console.log(myList);
