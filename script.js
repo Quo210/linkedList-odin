@@ -21,7 +21,8 @@ class LinkedList {
             console.log('Last node fonund was',selector)
             selector.nextNode = myNode
             this.size++
-        }  
+        }
+        return this
     };
     preprend(val){
         let oldHead = this.headNode;
@@ -34,9 +35,10 @@ class LinkedList {
             this.headNode = newNode;
             this.size++
         }
+        return this
     }
 
-    /*          -----------------------------            */
+    /* ------------------------ */
 
     get listSize(){
         return 'This list has a size of ' + this.size;
@@ -57,6 +59,8 @@ class LinkedList {
         const lastNode = this.#findLast(this.headNode);
         return lastNode
     }
+
+    /* ------------------------ */
 
     at(index){
         const store = this.#mkNodeArray();
